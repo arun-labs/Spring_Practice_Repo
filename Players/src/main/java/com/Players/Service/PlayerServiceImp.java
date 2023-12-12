@@ -45,6 +45,13 @@ public class PlayerServiceImp implements PlayerService {
 
     }
 
-   
+    public Players removePlayer(String id) {
+        Optional<Players> playerToRemove = playerRepository.findById(id);
+        if (playerToRemove.isPresent()) {
+            playerRepository.deleteById(id);
+            return playerToRemove.get();
+        }
+        return null;
+    }
     
 }

@@ -13,4 +13,6 @@ public interface PlayerService {
     List<Players> getAllPlayers();
 
     Optional<Players> viewById(String id);
+
+    // Players removPlayers
 }

@@ -2,7 +2,7 @@ package com.Players.Entity;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Document(collection="players")
 public class Players {
     private String id;
     private String name;
